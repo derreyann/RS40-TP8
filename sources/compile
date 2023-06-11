@@ -1,0 +1,8 @@
+#!/bin/csh -f
+
+if ! (-f "$1.c") then
+   echo "utilisation :     compile nom_fichier    (sans extension)"
+else
+   echo "nom de l'executable : $1"
+   gcc -pthread -DO -o $1 $1.c
+endif
